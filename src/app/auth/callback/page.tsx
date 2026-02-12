@@ -22,7 +22,8 @@ export default function AuthCallbackPage() {
 
         const user = session?.user;
 
-        if (!user?.email?.endsWith("@cedar.edu.pk")) { // change to heuser.edu.pk later
+        if (!user?.email?.endsWith("@cedar.edu.pk")) {
+          // change to heuser.edu.pk later
           await supabase.auth.signOut();
           toast.error("Please login with your Heuser email");
           router.replace("/login");
@@ -39,5 +40,5 @@ export default function AuthCallbackPage() {
     handleAuthRedirect();
   }, [router]);
 
-  return <Loading bg={bg} />;
+  return <Loading />;
 }
