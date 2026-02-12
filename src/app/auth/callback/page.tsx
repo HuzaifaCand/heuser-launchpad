@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
-import { bg } from "@/components/LoginComponent";
 import Loading from "@/components/Loading";
 
 export default function AuthCallbackPage() {
